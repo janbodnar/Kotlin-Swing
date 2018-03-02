@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent
 import javax.swing.*
 
 
-class KotlinSwingSimpleMenuExEx(title: String) : JFrame() {
+class KotlinSwingSimpleMenuEx(title: String) : JFrame() {
 
     init {
         createUI(title)
@@ -46,7 +46,7 @@ class KotlinSwingSimpleMenuExEx(title: String) : JFrame() {
 
 private fun createAndShowGUI() {
 
-    val frame = KotlinSwingSimpleMenuExEx("Simple menu")
+    val frame = KotlinSwingSimpleMenuEx("Simple menu")
     frame.isVisible = true
 }
 
