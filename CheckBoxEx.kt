@@ -30,8 +30,8 @@ class KotlinSwingCheckBoxEx(title: String) : JFrame() {
 
         createLayout(checkBox)
 
-        defaultCloseOperation = JFrame.EXIT_ON_CLOSE
-        setSize(300, 200)
+        defaultCloseOperation = EXIT_ON_CLOSE
+        setSize(400, 300)
         setLocationRelativeTo(null)
     }
 
@@ -43,11 +43,11 @@ class KotlinSwingCheckBoxEx(title: String) : JFrame() {
         gl.autoCreateContainerGaps = true
 
         gl.setHorizontalGroup(gl.createSequentialGroup()
-                .addComponent(arg[0])
+            .addComponent(arg[0])
         )
 
         gl.setVerticalGroup(gl.createSequentialGroup()
-                .addComponent(arg[0])
+            .addComponent(arg[0])
         )
 
         pack()
@@ -60,6 +60,6 @@ private fun createAndShowGUI() {
     frame.isVisible = true
 }
 
-fun main(args: Array<String>) {
+fun main() {
     EventQueue.invokeLater(::createAndShowGUI)
 }
