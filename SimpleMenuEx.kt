@@ -3,7 +3,11 @@ package com.zetcode
 import java.awt.EventQueue
 import java.awt.event.ActionEvent
 import java.awt.event.KeyEvent
-import javax.swing.*
+import javax.swing.ImageIcon
+import javax.swing.JFrame
+import javax.swing.JMenu
+import javax.swing.JMenuBar
+import javax.swing.JMenuItem
 
 class KotlinSwingSimpleMenuEx(title: String) : JFrame() {
 
@@ -17,8 +21,8 @@ class KotlinSwingSimpleMenuEx(title: String) : JFrame() {
 
         createMenuBar()
 
-        defaultCloseOperation = JFrame.EXIT_ON_CLOSE
-        setSize(300, 200)
+        defaultCloseOperation = EXIT_ON_CLOSE
+        setSize(400, 300)
         setLocationRelativeTo(null)
     }
 
@@ -49,6 +53,6 @@ private fun createAndShowGUI() {
     frame.isVisible = true
 }
 
-fun main(args: Array<String>) {
+fun main() {
     EventQueue.invokeLater(::createAndShowGUI)
 }
