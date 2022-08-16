@@ -9,7 +9,7 @@ import javax.swing.JMenu
 import javax.swing.JMenuBar
 import javax.swing.JMenuItem
 
-class KotlinSwingSimpleMenuEx(title: String) : JFrame() {
+class SimpleMenuEx(title: String) : JFrame() {
 
     init {
         createUI(title)
@@ -49,7 +49,7 @@ class KotlinSwingSimpleMenuEx(title: String) : JFrame() {
 
 private fun createAndShowGUI() {
 
-    val frame = KotlinSwingSimpleMenuEx("Simple menu")
+    val frame = SimpleMenuEx("Simple menu")
     frame.isVisible = true
 }
 
