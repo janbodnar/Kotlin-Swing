@@ -1,8 +1,13 @@
 package com.zetcode
 
-import javax.swing.*
+import java.awt.EventQueue
+import javax.swing.GroupLayout
+import javax.swing.ImageIcon
+import javax.swing.JComponent
+import javax.swing.JFrame
+import javax.swing.JLabel
 
-class KotlinSwingLabelIconEx(title: String) : JFrame() {
+class LabelIconsEx(title: String) : JFrame() {
 
     init {
         createUI(title)
@@ -18,7 +23,7 @@ class KotlinSwingLabelIconEx(title: String) : JFrame() {
         createLayout(lbl1, lbl2, lbl3, lbl4)
 
         setTitle(title)
-        defaultCloseOperation = JFrame.EXIT_ON_CLOSE
+        defaultCloseOperation = EXIT_ON_CLOSE
         setLocationRelativeTo(null)
     }
 
@@ -30,14 +35,16 @@ class KotlinSwingLabelIconEx(title: String) : JFrame() {
         gl.autoCreateContainerGaps = true
         gl.autoCreateGaps = true
 
-        gl.setHorizontalGroup(gl.createSequentialGroup()
+        gl.setHorizontalGroup(
+            gl.createSequentialGroup()
                 .addComponent(arg[0])
                 .addComponent(arg[1])
                 .addComponent(arg[2])
                 .addComponent(arg[3])
         )
 
-        gl.setVerticalGroup(gl.createParallelGroup()
+        gl.setVerticalGroup(
+            gl.createParallelGroup()
                 .addComponent(arg[0])
                 .addComponent(arg[1])
                 .addComponent(arg[2])
@@ -50,10 +57,10 @@ class KotlinSwingLabelIconEx(title: String) : JFrame() {
 
 private fun createAndShowGUI() {
 
-    val frame = KotlinSwingLabelIconEx("Icons")
+    val frame = LabelIconsEx("Icons")
     frame.isVisible = true
 }
 
-fun main(args: Array<String>) {
-    SwingUtilities.invokeLater(::createAndShowGUI)
+fun main() {
+    EventQueue.invokeLater(::createAndShowGUI)
 }
