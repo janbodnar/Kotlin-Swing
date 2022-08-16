@@ -3,7 +3,7 @@ package com.zetcode
 import java.awt.EventQueue
 import javax.swing.JFrame
 
-class KotlinSwingSimpleEx(title: String) : JFrame() {
+class SimpleEx(title: String) : JFrame() {
 
     init {
         createUI(title)
@@ -21,7 +21,7 @@ class KotlinSwingSimpleEx(title: String) : JFrame() {
 
 private fun createAndShowGUI() {
 
-    val frame = KotlinSwingSimpleEx("Simple")
+    val frame = SimpleEx("Simple")
     frame.isVisible = true
 }
 
