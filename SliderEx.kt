@@ -65,7 +65,7 @@ class SliderEx(title: String) : JFrame() {
 
 private fun createAndShowGUI() {
 
-    val frame = SliderEx("Slider")
+    val frame = SliderEx("JSlider")
     frame.isVisible = true
 }
 
