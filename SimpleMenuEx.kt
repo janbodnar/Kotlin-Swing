@@ -8,6 +8,7 @@ import javax.swing.JFrame
 import javax.swing.JMenu
 import javax.swing.JMenuBar
 import javax.swing.JMenuItem
+import kotlin.system.exitProcess
 
 class SimpleMenuEx(title: String) : JFrame() {
 
@@ -37,7 +38,7 @@ class SimpleMenuEx(title: String) : JFrame() {
         val eMenuItem = JMenuItem("Exit", icon)
         eMenuItem.mnemonic = KeyEvent.VK_E
         eMenuItem.toolTipText = "Exit application"
-        eMenuItem.addActionListener { _: ActionEvent -> System.exit(0) }
+        eMenuItem.addActionListener { _: ActionEvent -> exitProcess(0) }
 
         file.add(eMenuItem)
 
