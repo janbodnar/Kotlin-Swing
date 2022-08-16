@@ -1,7 +1,7 @@
 package com.zetcode
 
 import java.awt.EventQueue
-import javax.swing.*
+import javax.swing.JFrame
 
 class KotlinSwingSimpleEx(title: String) : JFrame() {
 
@@ -13,8 +13,8 @@ class KotlinSwingSimpleEx(title: String) : JFrame() {
 
         setTitle(title)
 
-        defaultCloseOperation = JFrame.EXIT_ON_CLOSE
-        setSize(300, 200)
+        defaultCloseOperation = EXIT_ON_CLOSE
+        setSize(400, 300)
         setLocationRelativeTo(null)
     }
 }
@@ -25,6 +25,6 @@ private fun createAndShowGUI() {
     frame.isVisible = true
 }
 
-fun main(args: Array<String>) {
+fun main() {
     EventQueue.invokeLater(::createAndShowGUI)
 }
