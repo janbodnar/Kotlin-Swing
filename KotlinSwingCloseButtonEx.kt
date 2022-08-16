@@ -1,9 +1,14 @@
 package com.zetcode
 
 import java.awt.EventQueue
-import javax.swing.*
+import javax.swing.GroupLayout
+import javax.swing.JButton
+import javax.swing.JComponent
+import javax.swing.JFrame
 
-class KotlinSwingCloseButtonEx(title: String) : JFrame() {
+import kotlin.system.exitProcess
+
+class CloseButtonEx(title: String) : JFrame() {
 
     init {
         createUI(title)
@@ -15,12 +20,12 @@ class KotlinSwingCloseButtonEx(title: String) : JFrame() {
 
         val closeBtn = JButton("Close")
 
-        closeBtn.addActionListener { System.exit(0) }
+        closeBtn.addActionListener { exitProcess(0) }
 
         createLayout(closeBtn)
 
-        defaultCloseOperation = JFrame.EXIT_ON_CLOSE
-        setSize(300, 200)
+        defaultCloseOperation = EXIT_ON_CLOSE
+        setSize(400, 300)
         setLocationRelativeTo(null)
     }
 
@@ -32,11 +37,13 @@ class KotlinSwingCloseButtonEx(title: String) : JFrame() {
 
         gl.autoCreateContainerGaps = true
 
-        gl.setHorizontalGroup(gl.createSequentialGroup()
+        gl.setHorizontalGroup(
+            gl.createSequentialGroup()
                 .addComponent(arg[0])
         )
 
-        gl.setVerticalGroup(gl.createSequentialGroup()
+        gl.setVerticalGroup(
+            gl.createSequentialGroup()
                 .addComponent(arg[0])
         )
 
@@ -46,10 +53,10 @@ class KotlinSwingCloseButtonEx(title: String) : JFrame() {
 
 private fun createAndShowGUI() {
 
-    val frame = KotlinSwingCloseButtonEx("Close button")
+    val frame = CloseButtonEx("Close button")
     frame.isVisible = true
 }
 
-fun main(args: Array<String>) {
+fun main() {
     EventQueue.invokeLater(::createAndShowGUI)
 }
