@@ -7,7 +7,7 @@ import javax.swing.JCheckBox
 import javax.swing.JComponent
 import javax.swing.JFrame
 
-class KotlinSwingCheckBoxEx(title: String) : JFrame() {
+class CheckBoxEx(title: String) : JFrame() {
 
     init {
         createUI(title)
@@ -56,7 +56,7 @@ class KotlinSwingCheckBoxEx(title: String) : JFrame() {
 
 private fun createAndShowGUI() {
 
-    val frame = KotlinSwingCheckBoxEx("JCheckBox")
+    val frame = CheckBoxEx("JCheckBox")
     frame.isVisible = true
 }
 
