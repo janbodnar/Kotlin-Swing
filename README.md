@@ -1,4 +1,4 @@
 # Kotlin-Swing
 Kotlin Swing code examples.
 
-http://zetcode.com/kotlin/swing/
+https://zetcode.com/kotlin/swing/
