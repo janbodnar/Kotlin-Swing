@@ -9,7 +9,7 @@ import javax.swing.JFrame
 import javax.swing.JLabel
 
 
-class MouseMoveEx(title: String) : JFrame() {
+class MouseMotionEx(title: String) : JFrame() {
 
     private lateinit var coords:JLabel
 
@@ -63,7 +63,7 @@ class MouseMoveEx(title: String) : JFrame() {
 
 private fun createAndShowGUI() {
 
-    val frame = MouseMoveEx("Mouse move events")
+    val frame = MouseMotionEx("Mouse move events")
     frame.isVisible = true
 }
 
